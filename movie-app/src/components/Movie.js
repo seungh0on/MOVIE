@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react'
+// Movie.js
+import React, { useEffect, useState } from 'react';
 
 function Movie(){
 
@@ -17,11 +18,11 @@ function Movie(){
 
     return (
         <div>
-            {movieList.map(()=>(
-                <img style={{width:"300px", height:"250px", marginLeft: "10px", marginTop:"10px"}} src ={`https://image.tmdb.org/t/p/w500${Movie.poster_path}`}/>
+            {movieList.map((movie)=>(
+                <img style={{width:"300px", height:"250px", marginLeft: "10px", marginTop:"10px"}} src ={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>
             ))}
         </div>
     )
 }
 
-export default Movie
+export default Movie;
